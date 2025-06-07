@@ -1,0 +1,28 @@
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.footer {
+    position: absolute;
+    bottom: 0; 
+    height:10vh;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: auto;
+    gap: 550px;
+}
+.footer p {
+    font-size: 12px;
+    font-weight: 300;
+    width: 50%;
+    text-align: left;
+    margin-left: 20px;
+}
+.footer .Icons {
+    display: flex;
+    justify-content: space-between;
+    width: 100px;
+}                       
