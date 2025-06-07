@@ -4,14 +4,48 @@
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 2;
+  text-align: center;
+  width: 100%;
+  max-width: 800px;
+  padding: 0 20px;
 }
 
 .text h1 {
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   color: white;
-  font-size: 250px;
+  font-size: clamp(4rem, 20vw, 15rem);
   font-weight: 200;
   white-space: nowrap;
   text-align: center;
-  /* word-spacing: 10px; */
+  letter-spacing: -2px;
+  line-height: 1;
+  background: linear-gradient(45deg, #ff0000, #00ffff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: all 0.3s ease;
+}
+
+/* Hover effect */
+.text h1:hover {
+  transform: scale(1.05);
+}
+
+/* Tablet and Desktop adjustments */
+@media (min-width: 768px) {
+  .text {
+    padding: 0 40px;
+  }
+  
+  .text h1 {
+    font-size: clamp(5rem, 18vw, 20rem);
+    letter-spacing: -3px;
+  }
+}
+
+/* Large screens */
+@media (min-width: 1200px) {
+  .text h1 {
+    font-size: clamp(6rem, 16vw, 25rem);
+    letter-spacing: -4px;
+  }
 }
