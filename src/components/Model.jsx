@@ -4,7 +4,7 @@ import { OrbitControls, useGLTF } from '@react-three/drei';
 import { useFrame } from '@react-three/fiber';
 import { useRef } from 'react';
 
-import ironManModel from '../../assets/iron_man_mark_85.glb?url';
+import ironManModel from '../assets/iron_man_mark_85.glb?url';
 
 function MyModel(props) {
   const { scene } = useGLTF(ironManModel);
