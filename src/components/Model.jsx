@@ -4,8 +4,10 @@ import { OrbitControls, useGLTF } from '@react-three/drei';
 import { useFrame } from '@react-three/fiber';
 import { useRef } from 'react';
 
+import ironManModel from '../../assets/iron_man_mark_85.glb?url';
+
 function MyModel(props) {
-  const { scene } = useGLTF('/iron_man_mark_85.glb');
+  const { scene } = useGLTF(ironManModel);
   const modelRef = useRef();
   useFrame(({ mouse }) => {
     if (modelRef.current) {
@@ -18,7 +20,7 @@ function MyModel(props) {
 }
 
 // Preload model for performance
-useGLTF.preload('/iron_man_mark_85.glb');
+useGLTF.preload(ironManModel);
 
 export default function Model() {
   return (
